@@ -16,4 +16,6 @@ Cycles through each term,link pair in `terms\_links.csv', grabs translations in 
 
 # Dependencies
 
-Uses core Python libraries and command line tools `curl' and `uniq'
+Uses core Python libraries and command line tools `curl' and `uniq'.
+
+Only third-party library is (Beautiful Soup)[http://www.crummy.com/software/BeautifulSoup/bs4/doc/]
