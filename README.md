@@ -7,7 +7,12 @@ Series of scripts to grab the content on the [UNBIS thesaurus](http://lib-thesau
 `./grab_categories.sh'
 `python parse\_links\_categories.py'
 
-Produces each term and its direct link in a TSV file; `terms_links.csv'
+Produces each term and its direct link in a TSV file; `terms\_links.csv'
+
+`python get\_words\_from\_links.py'
+
+Cycles through each term,link pair in `terms\_links.csv', grabs translations in all 6 languages and writes to file.
+
 
 # Dependencies
 
