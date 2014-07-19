@@ -1,21 +1,23 @@
 # UN Thesaurus Scraping
 
-Series of scripts to grab the content on the [UNBIS thesaurus](http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf/$$searche?OpenForm)
+Series of scripts to grab the content of the [UNBIS thesaurus](http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf/$$searche?OpenForm)
 
 # Usage
 
-`./grab_categories.sh'
-`python parse\_links\_categories.py'
+_Please use this script sensibly, do not hit the UN BIS server any more than necessary. A copy of the output is provided here, this code is just for informational purposes._
 
-Produces each term and its direct link in a TSV file; `terms\_links.csv'
+`./grab_categories.sh`
+`python parse\_links\_categories.py`
 
-`python get\_words\_from\_links.py'
+Produces each term and its direct link in a TSV file; `terms\_links.csv`
 
-Cycles through each term,link pair in `terms\_links.csv', grabs translations in all 6 languages and writes to file.
+`python get\_words\_from\_links.py`
+
+Cycles through each term,link pair in `terms\_links.csv`, grabs translations in all 6 languages and writes to file.
 
 
 # Dependencies
 
-Uses core Python libraries and command line tools `curl' and `uniq'.
+Uses core Python libraries and command line tools `curl` and `uniq'`
 
-Only third-party library is (Beautiful Soup)[http://www.crummy.com/software/BeautifulSoup/bs4/doc/]
+Only third-party library is [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)
