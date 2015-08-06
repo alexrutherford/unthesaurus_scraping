@@ -22,3 +22,7 @@ Cycles through each term,link pair in `terms_links.csv`, grabs translations in a
 Uses core Python libraries and command line tools `curl` and `uniq`
 
 Only third-party library is [Beautiful Soup](http://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+
+# Still To Do
+
+Update to grab other terms related to each term.
