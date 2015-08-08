@@ -27,7 +27,7 @@ relationsDict=collections.defaultdict(list)
 for line in relationsFile:
     relationsDict[line[0].decode('utf-8')]=[l.decode('utf-8') for l in line[1:]]
     # These are ontology terms in each language to be searched for
-    # Key={'Broader terms','Related terms','Top terms'}
+    # Key={'Broader terms','Related terms','Top terms','Narrower terms'}
     # Value=[translationES,translationRU,translationAR,translationCN,translationFR]
 ###########################################
 termsFile=csv.reader(open('out.csv','r'),delimiter='\t')
@@ -39,6 +39,7 @@ for line in termsFile:
     # Dictionary of each term in thesaurus, Key is English term, value is list of translations [AR,CN,FR,RU,FR,EN]
     # e.g. termsDict['electronic publications']=['لمنشورات الإلكترونية','电子出版物','publications electroniques'
     # 'Электронные издания','publicaciones electronicas','electronic publications']
+logging.info('Finised reading input files')
 ###########################################
 def translateRelation(relation,lang,originalTerm,text,langN):
     '''
@@ -88,7 +89,7 @@ def main():
     nLine=0
 
     for line in ontologiesFile:
-        logging.debug('LINE %d:' %(nLine))
+        logging.warning('LINE %d:' %(nLine))
 
         #for n,part in enumerate(line):
         #    print '\t',n,part

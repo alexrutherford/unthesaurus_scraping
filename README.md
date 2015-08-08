@@ -40,12 +40,11 @@ Only third-party library is [Beautiful Soup](http://www.crummy.com/software/Beau
 
 The ontology terms that are included for each language are
 
-1. Term Relationships:
-2. Broader terms:
-3. Narrower terms:
-4. Related terms:
-5. Top terms:
+* Broader terms:
+* Narrower terms:
+* Related terms:
+* Top terms:
 
-# Still To Do
+# To Do
 
-Update to grab other terms related to each term.
+Parse out 'Used for:' in main term panel, [example](http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf/MultiEng/06120B6689A0899C85256AA0005FA2C1?OpenDocument)
