@@ -28,6 +28,8 @@ Example (taken from [here](http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf
 
 `relationsHash['ES']['INDUSTRIA METALMECANICA']['Broader terms']=['INDUSTRIA PESADA']`
 
+`relations.csv` stores different types of ontology relations in each language
+
 # Dependencies
 
 Uses core Python libraries and command line tools `curl` and `uniq`
