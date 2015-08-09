@@ -1,6 +1,6 @@
 # UN Thesaurus Scraping
 
-Series of scripts to grab the content of the [UNBIS thesaurus](http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf/$$searche?OpenForm)
+Series of scripts to grab the content of the [UNBIS thesaurus](http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf/$$searche?OpenForm). More info on the thesuarus [here](http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf/zHelpDocuments/English+About+Help?OpenDocument)
 
 # Usage
 
