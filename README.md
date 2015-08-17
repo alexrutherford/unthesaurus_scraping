@@ -30,6 +30,8 @@ Example (taken from [here](http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf
 
 `relations.csv` stores different types of ontology relations in each language
 
+`make_iframe_page.ipynb` takes a random selection of terms and created a page with embedded plots of [n-gram](https://books.google.com/ngrams/) frequency
+
 # Dependencies
 
 Uses core Python libraries and command line tools `curl` and `uniq`
