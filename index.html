@@ -52,7 +52,7 @@ python parse_links_categories.py
 <pre><code>python get_words_from_links.py
 </code></pre>
 
-<p>Cycles through each term,link pair in <code>terms_links.csv</code>, grabs translations in all 6 languages and writes to file.</p>
+<p>Cycles through each term,link pair in <code>terms_links.csv</code>, grabs translations in all 6 languages and writes to <code>out.csv</code> and translation of all realtions in each language <code>relations.csv</code>.</p>
 
 <p><code>parse_relations.py</code> parses the panels on each page describing how the term relates to other terms in each language e.g. related terms, broader terms.</p>
 
@@ -68,7 +68,13 @@ python parse_links_categories.py
     ['Broader terms']=['INDUSTRIA PESADA']
 </code></pre>
 
-<p><code>relations.csv</code> stores different types of ontology relations in each language</p>
+<p><code>relations.csv</code> stores different types of ontology relations in each language i.e. 'Related terms' in each of the 5 non-English languages.</p>
+
+<p>`out.csv' stores look up of each term by English translation e.g. 
+    termsDict['electronic publications']=['لمنشورات الإلكترونية','电子出版物','publications
+        electroniques','Электронные издания','publicaciones electronicas','electronic publications']</p>
+
+<p><code>ontology.json</code> stores the full set of relations between terms in each language. First level key is language, second is the original term in language, third is EN translation of relationship, value is the synonym itself.</p>
 
 <p><code>make_iframe_page.ipynb</code> takes a random selection of terms and created a page with embedded plots of <a href="https://books.google.com/ngrams/">n-gram</a> frequency. An example is <a href="https://github.com/alexrutherford/unthesaurus_scraping/blob/master/iframes.html">here</a> and can be seen live <a href="http://alexrutherford.org/sandbox/iframes">here</a>. Some graphs do not render due to low volumes or errors associated with hitting the API very frequently</p>
 
