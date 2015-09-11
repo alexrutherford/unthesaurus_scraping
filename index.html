@@ -54,10 +54,7 @@ python parse_links_categories.py
 
 <p>Cycles through each term,link pair in <code>terms_links.csv</code>, grabs translations in all 6 languages and writes to file.</p>
 
-<pre><code>parse_relations.py
-</code></pre>
-
-<p>Parses the panels on each page describing how the term relates to other terms in each language e.g. related terms, broader terms.</p>
+<p><code>parse_relations.py</code> parses the panels on each page describing how the term relates to other terms in each language e.g. related terms, broader terms.</p>
 
 <p>Outputs relationsHash which has the following schema</p>
 
@@ -69,11 +66,11 @@ python parse_links_categories.py
 
 <pre><code>relationsHash['ES']['INDUSTRIA METALMECANICA']
     ['Broader terms']=['INDUSTRIA PESADA']
-
-relations.csv stores different types of ontology relations in each language
 </code></pre>
 
-<p><code>make_iframe_page.ipynb</code> takes a random selection of terms and created a page with embedded plots of <a href="https://books.google.com/ngrams/">n-gram</a> frequency</p>
+<p><code>relations.csv</code> stores different types of ontology relations in each language</p>
+
+<p><code>make_iframe_page.ipynb</code> takes a random selection of terms and created a page with embedded plots of <a href="https://books.google.com/ngrams/">n-gram</a> frequency. An example is <a href="https://github.com/alexrutherford/unthesaurus_scraping/blob/master/iframes.html">here</a> and can be seen live <a href="http://alexrutherford.org/sandbox/iframes">here</a>. Some graphs do not render due to low volumes or errors associated with hitting the API very frequently</p>
 
 <h1>
 <a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h1>
