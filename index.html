@@ -28,10 +28,12 @@
         </ul>
       </header>
       <section>
-        <p>Did you know that the UN library services has carefully constructed a hierarchical taxonomy of terms related to it's work? For example you can see <a href="http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf/MultiEng/0037CF0C07DD6D2485256AA0005FA8F3?OpenDocument">from this example</a> that 'Metal Working Industry' has broader terms ('Heavy Industry') and narrower terms ('Copper Industry') and related terms ('Metals' and 'Welding'). These terms are all translated into the 6 official languages of the UN: English, French, Spanish, Chinese, Russian and Arabic.</p>
-
-<h1>
+        <h1>
 <a id="un-thesaurus-scraping" class="anchor" href="#un-thesaurus-scraping" aria-hidden="true"><span class="octicon octicon-link"></span></a>UN Thesaurus Scraping</h1>
+
+<p>Did you know that the UN library services has carefully constructed a hierarchical taxonomy of terms related to it's work? For example you can see <a href="http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf/MultiEng/0037CF0C07DD6D2485256AA0005FA8F3?OpenDocument">from this example</a> that 'Metal Working Industry' has broader terms ('Heavy Industry') and narrower terms ('Copper Industry') and related terms ('Metals' and 'Welding'). These terms are all translated into the 6 official languages of the UN: English, French, Spanish, Chinese, Russian and Arabic. </p>
+
+<p>This taxonomy represents an awesome resource for understanding how language related to UN and diplomatic work is used. However, it is currently under utilised as the raw underlying data is not easily available. This is a set of Python scripts to grab that data, put it in an easily digestable JSON format and perform some simple comparison of these terms.</p>
 
 <p>Series of scripts to grab the content of the <a href="http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf/%24%24searche?OpenForm">UNBIS thesaurus</a>. More info on the thesuarus <a href="http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf/zHelpDocuments/English+About+Help?OpenDocument">here</a></p>
 
@@ -40,33 +42,35 @@
 
 <p><em>Please use this script sensibly, do not hit the UN BIS server any more than necessary. A copy of the output is provided here, this code is just for informational purposes.</em></p>
 
-<pre><code>`./grab_categories.sh`
+<pre><code>./grab_categories.sh
 
-`python parse_links_categories.py`
+python parse_links_categories.py
 </code></pre>
 
 <p>Produces each term and its direct link in a TSV file; <code>terms_links.csv</code></p>
 
-<pre><code>`python get_words_from_links.py`
+<pre><code>python get_words_from_links.py
 </code></pre>
 
 <p>Cycles through each term,link pair in <code>terms_links.csv</code>, grabs translations in all 6 languages and writes to file.</p>
 
-<pre><code>`parse_relations.py`
+<pre><code>parse_relations.py
 </code></pre>
 
 <p>Parses the panels on each page describing how the term relates to other terms in each language e.g. related terms, broader terms.</p>
 
-<p>Outputs <code>relationsHash</code> which has the following schema</p>
+<p>Outputs relationsHash which has the following schema</p>
 
-<pre><code>`relationsHash[lang][translatedTerm][relation]=[relatedTerm1,relatedTerm2...relatedTermN]`
+<pre><code>relationsHash[lang][translatedTerm][relation]=[relatedTerm1,
+    relatedTerm2...relatedTermN]
 </code></pre>
 
 <p>Example (taken from <a href="http://lib-thesaurus.un.org/LIB/DHLUNBISThesaurus.nsf/MultiEng/0037CF0C07DD6D2485256AA0005FA8F3?OpenDocument">here</a>):</p>
 
-<pre><code>`relationsHash['ES']['INDUSTRIA METALMECANICA']['Broader terms']=['INDUSTRIA PESADA']`
+<pre><code>relationsHash['ES']['INDUSTRIA METALMECANICA']
+    ['Broader terms']=['INDUSTRIA PESADA']
 
-`relations.csv` stores different types of ontology relations in each language
+relations.csv stores different types of ontology relations in each language
 </code></pre>
 
 <p><code>make_iframe_page.ipynb</code> takes a random selection of terms and created a page with embedded plots of <a href="https://books.google.com/ngrams/">n-gram</a> frequency</p>
